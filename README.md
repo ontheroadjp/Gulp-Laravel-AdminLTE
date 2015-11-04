@@ -32,7 +32,7 @@
 ## Install
 
 ```
-$ git clone -b lara https://github.com/ontheroadjp/Gulp-PHP-AdminLTE.git
+$ git clone https://github.com/ontheroadjp/Gulp-Laravel-AdminLTE.git 
 $ cd Gulp-PHP-AdminLTE
 $ npm install
 $ gulp
