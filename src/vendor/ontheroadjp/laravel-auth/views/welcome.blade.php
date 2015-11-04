@@ -39,7 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Gulp-Laravel5-AdminLTE</div>
-                <div><a href="home" class="btn btn-primary">{{ _('Start now !') }}</a></div>
+                <div><a href="home" class="btn btn-primary">{{ _('Start now !!') }}</a></div>
             </div>
         </div>
     </body>

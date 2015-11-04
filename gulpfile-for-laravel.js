@@ -10,14 +10,13 @@ var imagemin = require('gulp-imagemin');
 var php = require('gulp-connect-php');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
-
 var shell = require('gulp-shell');
 
 // Directory Paths
 
 var paths = {
 	'jquery': 'bower_components/jquery/',
-	'bootstrap': 'bower_components/bootstrap-sass/assets//',
+	'bootstrap': 'bower_components/bootstrap-sass/assets/',
 	'fontawesome': 'bower_components/font-awesome/',
 	'adminlte': 'bower_components/AdminLTE/',
 	'src': 'src/',
@@ -25,6 +24,13 @@ var paths = {
 	'lara_resources': 'resources/',
 	'lara_vendor': 'vendor/ontheroadjp/gulp-laravel-adminlte',
 }
+
+// -------------------------
+// vendor:publish
+
+gulp.task('publish',shell.task([ 
+	'php artisan vendor:publish --force --provider="Ontheroadjp\\LaravelAuth\\Providers\\LaravelAuthServiceProvider"'
+]));
 
 // -------------------------
 // build
@@ -67,10 +73,6 @@ gulp.task('bowerassets', function() {
 
 // -------------------------
 // Assets
-
-gulp.task('publish',shell.task([ 
-	'php artisan vendor:publish --force'
-]));
 
 gulp.task('assets', function() {
 	
@@ -156,13 +158,23 @@ gulp.task('bs-reload', function () {
 	browserSync.reload();
 });
 
+gulp.task('publish-bs-reload', function(callback) {
+	return runSequence(
+		'publish',
+		['bs-reload' ]
+	);
+});
+
 // -------------------------
 // Task for `gulp` command
 
 gulp.task('default',['browser-sync'], function() {
-	gulp.watch(paths.src + "**/*.html", ['assets','publish','bs-reload']);
-	gulp.watch(paths.src + "**/*.php", ['assets','publish','bs-reload']);
+	gulp.watch(paths.src + "**/*.html", ['publish-bs-reload']);
+	gulp.watch(paths.src + "**/*.php", ['publish-bs-reload']);
 	gulp.watch(paths.src + 'js/**/*.js',['js','bs-reload']);
 	gulp.watch(paths.src + 'sass/**/*.scss',['sass','bs-reload']);
 	gulp.watch(paths.src + 'img/**/*.{png,jpg,gif,svg}',['imagemin','bs-reload']);
 });
+
+
+

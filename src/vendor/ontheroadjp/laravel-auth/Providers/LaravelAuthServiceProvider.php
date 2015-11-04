@@ -15,8 +15,8 @@ use Illuminate\Console\AppNamespaceDetectorTrait;
 use Route;
 
 /**
- * Class AdminLTETemplateServiceProvider
- * @package Acacha\AdminLTETemplateLaravel\Providers
+ * Class LaravelAuthServiceProvider
+ * @package Ontheroad\LaravelAuth\Providers
  */
 class LaravelAuthServiceProvider extends ServiceProvider
 {
