@@ -103,7 +103,8 @@ class LaravelAuthServiceProvider extends ServiceProvider
     private function publishLangAssets()
     {
         $this->publishes([
-            dirname(__FILE__) . '/../lang' => base_path('resources/assets/lang'),
+            dirname(__FILE__) . '/../lang/i18n' => base_path('resources/lang/'),
+            dirname(__FILE__) . '/../lang/ja' => base_path('resources/lang/'),
         ]);
     }
 

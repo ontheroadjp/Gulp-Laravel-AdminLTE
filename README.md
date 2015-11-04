@@ -1,15 +1,33 @@
-# Gulp-PHP-AdminLTE（for Laravel 5.1）
+# Gulp-Laravel-AdminLTE
 
-* Gulp による お手軽 Laravel 開発環境の構築。
+* Gulp + Bower + Composer による お手軽 Laravel 開発環境の構築。
 
 **主な機能**
 
 * Laravel 5.1 クリーンインストール
-* SASS（`.scss`）の コンパイル & 連結 & ミニファイ
-* Javascript ファイルの連結 & ミニファイ
-* 画像ファイル（`.png``.gif`,`.jpg`,`.svg`）の画像最適化
+* gettext を利用した Laravel 多言語化パッケージのインストール
+* JQuery 2.1.4 クリーンインストール（by Bower）
+* Bootstrap  3.3.5（sass版） クリーンインストール（by Bower）
+* AdminLTE 2.3.2 クリーンインストール（by Bower）
+* Font-Awesome 4.4.0 クリーンインストール（by Bower）
+* 上記ライブラリの・・・
+
+	1. SASSファイルの コンパイル & 連結 & ミニファイ
+	2. Javascript ファイルの連結 & ミニファイ
+	3. 画像ファイル（`.png``.gif`,`.jpg`,`.svg`）のロスレス軽量化
+	
+	をした上で、Laravel の public ディレクトリへ保存
+
+* ユーザー管理機能
+
+	1. 新規ユーザー登録
+	2. パスワードリセット
+	3. ログイン認証
+	4. ログアウト
+	5. 多言語化対応した Blade テンプレートビュー
+	6. ユーザー認証機能に必要な DB（SQLite3） 設置 & 設定
+
 * PHP ビルトインサーバー
-* オートリロード
 
 ## Install
 
@@ -19,21 +37,6 @@ $ cd Gulp-PHP-AdminLTE
 $ npm install
 $ gulp
 ```
-
-**Installed**
-
-(Core)
-
-* Laravel 5.1.11
-* AdminLTE 2.3.2
-* Bootstrap 3.3.5
-* Font-Awesome 4.4.0
-* JQuery 2.1.4
-
-(Laravel Library)
-
-* ontheroadjp/laravel-auth
-* xinax/laravel-gettext
 
 ## Run
 
