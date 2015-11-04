@@ -1,0 +1,24 @@
+{
+  "name": "PHP-AdminLTE",
+  "version": "1.0.0",
+  "authors": [
+    "@ontheroad_jp <dev@ontheroad.jp>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "font-awesome": "~4.4.0",
+    "AdminLTE": "admin-lte#~2.3.2"
+  }
+}

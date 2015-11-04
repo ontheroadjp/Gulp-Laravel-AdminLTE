@@ -1,0 +1,22 @@
+
+<p><span class="citation">@extends</span>('app')</p>
+<p><span class="citation">@section</span>('htmlheader_title') {{ _('Home') }} <span class="citation">@endsection</span></p>
+<span class="citation">@section</span>('main-content') <!-- <div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+ -->
+<div class="panel panel-default">
+<pre><code>            &lt;div class=&quot;panel-heading&quot;&gt;{{ _(&#39;Home&#39;) }}&lt;/div&gt;
+
+            &lt;div class=&quot;panel-body&quot;&gt;
+                You are logged in!
+                &lt;?php if (Auth::viaRemember()) { ?&gt;
+                    via Remember Token
+                &lt;?php } ?&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+<!--        </div>
+    </div>
+</div>
+ -->
+<p><span class="citation">@endsection</span></p>

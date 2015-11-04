@@ -1,0 +1,10 @@
+
+.DS_Store
+*.un~
+.sass-cache/
+node_modules/
+bower_components/*
+public_html/
+public/
+laravel/
+resources/
